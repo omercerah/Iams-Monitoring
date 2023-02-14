@@ -1,5 +1,5 @@
 <template>
-  <apexchart width="100%" height="46%"  :options="chartOptions" :series="series"></apexchart>
+  <apexchart width="100%" height="48%"  :options="chartOptions" :series="series"></apexchart>
 </template>
 
 <script  >
@@ -27,7 +27,11 @@ export default {
           stacked: true,
           stackType: '100%',
           foreColor:'white',
-          height: 147
+          toolbar:{
+            tools: {
+              download: false
+            }
+          }
         },
         plotOptions: {
           bar: {
