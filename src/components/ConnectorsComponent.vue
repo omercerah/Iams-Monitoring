@@ -1,11 +1,11 @@
 <template>
   <div class="q-mt-sm text-subtitle2" style="text-align: center;background-color: #393838;color:white">CONNECTORS</div>
   <div class="row q-mt-sm" style="text-align: center" v-for="connector in connectorTodo" :key="connector.id">
-    <q-card class="my-card text-white" style="width:100%;background-color: #393838">
-      <div v-if="connector.connectionStatus==1" style="background-color: lawngreen;padding: 5px">
+    <q-card class="my-card text-white" style="width:100%;background-color: #393838;border-radius: 0px">
+      <div v-if="connector.connectionStatus==1" style="background-color: lawngreen;padding: 5px;border-radius: 0px">
         <div  class="q-ml-md text-subtitle2" style="text-align: left">{{ connector.name }}</div>
       </div>
-      <div v-if="connector.connectionStatus==0" style="background-color: red;padding: 5px">
+      <div v-if="connector.connectionStatus==0" style="background-color: red;padding: 5px;border-radius: 0px">
         <div  class="q-ml-md text-subtitle2" style="text-align: left">{{ connector.name }}</div>
       </div>
 

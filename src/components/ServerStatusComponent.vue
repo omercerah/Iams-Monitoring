@@ -4,7 +4,7 @@
 
     <div class="col-3"  v-for="todo in serverTodo" :key="todo.id" >
       <div  v-if="todo.cpuState==1"  style="text-align: center;height: 175px" class="q-mr-sm" >
-        <q-card class="my-card" style="width:100%;height:100%;background-color: lawngreen"  >
+        <q-card class="my-card" style="width:100%;height:100%;background-color: lawngreen;border-radius: 0px"  >
           <div style="text-align:left;padding: 5px"  >
 
           <div v-if="todo.cpuState==1" class="text-subtitle2">Cpu Status:<q-avatar color="green" text-color="white"  size="xs" /></div>
@@ -26,7 +26,7 @@
 
       </div>
       <div  v-if="todo.cpuState==0"  style="text-align: center;height: 175px" class="q-mr-sm" >
-        <q-card class="my-card" style="width:100%;height:100%;background-color: red"  >
+        <q-card class="my-card" style="width:100%;height:100%;background-color: red;border-radius: 0px"  >
           <div style="text-align:left;padding: 5px"  >
 
             <div v-if="todo.cpuState==1" class="text-subtitle2">Cpu Status:<q-avatar color="green" text-color="white"  size="xs" /></div>

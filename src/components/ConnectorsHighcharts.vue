@@ -38,17 +38,11 @@ export default {
             horizontal: true,
           },
         },
-        annotations:{
-          position: "front",
-          yaxis: [],
-          xaxis: [],
-          points: []
-        },
         colors:['#66FF00', '#FF0000' ],
         xaxis: {
           categories: [0],
           labels:{
-            show:false,
+            show:false
           },
           axisTicks: {
             show: false
@@ -72,13 +66,7 @@ export default {
          },
          labels:{
            show:false
-         },
-         axisBorder: {
-           show: false
-         },
-         axisTicks: {
-           show: false
-         },
+         }
 
        },
 
