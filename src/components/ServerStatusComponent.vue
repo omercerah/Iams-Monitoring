@@ -16,7 +16,7 @@
             <q-icon v-if="todo.cpuState==1"  name="check_circle" size="50px" color="white" />
             <q-icon v-if="todo.cpuState==0"  name="cancel" size="50px" color="white" />
 
-            <div class="server" >{{todo.name}}</div>
+            <div class="server text-subtitle2" >{{todo.name}}</div>
           </q-card-section>
           <q-card-section class="q-pt-none">
 
@@ -39,7 +39,7 @@
             <q-icon v-if="todo.cpuState==1"  name="check_circle" size="50px" color="white" />
             <q-icon v-if="todo.cpuState==0"  name="cancel" size="50px" color="white" />
 
-            <div class="server" >{{todo.name}}</div>
+            <div class="server text-subtitle2" >{{todo.name}}</div>
           </q-card-section>
           <q-card-section class="q-pt-none">
 
@@ -122,7 +122,7 @@ const props = withDefaults(defineProps<Props>(), {
 
 <style scoped>
 .server{
-  font-size: 26px;
+  font-size: 18px;
   color: white;
 }
 

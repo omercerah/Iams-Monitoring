@@ -16,7 +16,7 @@
           <q-card-section >
             <q-icon v-if="module.cpuState==1"  name="check_circle" size="50px" color="white" />
             <q-icon v-if="module.cpuState==0"  name="cancel" size="50px" color="white" />
-            <div class="module" >{{module.name}}</div>
+            <div class="module text-subtitle2" >{{module.name}}</div>
 
           </q-card-section>
           <q-card-section class="q-pt-none">
@@ -38,7 +38,7 @@
           <q-card-section >
             <q-icon v-if="module.cpuState==1"  name="check_circle" size="50px" color="white" />
             <q-icon v-if="module.cpuState==0"  name="cancel" size="50px" color="white" />
-            <div class="module" >{{module.name}}</div>
+            <div class="module text-subtitle2" >{{module.name}}</div>
 
           </q-card-section>
           <q-card-section class="q-pt-none">
@@ -118,7 +118,7 @@ const props = withDefaults(defineProps<Props>(), {
 
 <style scoped>
 .module{
-  font-size: 26px;
+  font-size: 18px;
   color: white;
 }
 </style>

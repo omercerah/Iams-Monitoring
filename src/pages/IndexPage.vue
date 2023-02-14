@@ -54,7 +54,7 @@ const serverTodo = ref<Server[]>([
 ]);
 const moduleTodo = ref<Module[]>([
   {
-    name:'DHW MODULE',
+    name:'DHW  MODULE',
     cpuState:1
   },
   {
