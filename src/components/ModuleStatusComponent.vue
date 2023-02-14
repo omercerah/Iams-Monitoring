@@ -1,5 +1,5 @@
 <template>
-  <div class="q-mt-sm q-mr-sm" style="text-align: center;background-color: #393838;color:white">MODULES STATUS</div>
+  <div class="q-mt-sm q-mr-sm text-subtitle2" style="text-align: center;background-color: #393838;color:white">MODULES STATUS</div>
   <div class="row q-mt-sm">
 
     <div class="col-3"  v-for="module in moduleTodo" :key="module.id">

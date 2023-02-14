@@ -1,7 +1,7 @@
 <template>
   <div class="row" >
     <div class="col-6" >
-      <div class="q-mt-sm q-mb-sm q-mr-sm" style="text-align: center;background-color: #393838;color:white" >ARCHIVAL OUTCOME</div>
+      <div class="q-mt-sm q-mb-sm q-mr-sm text-subtitle2" style="text-align: center;background-color: #393838;color:white" >ARCHIVAL OUTCOME</div>
       <div style="text-align: center;height: 155px" class="q-mr-sm  q-mt-sm" >
         <q-card class="my-card"  style="width:100%;height: 100%;background-color: lawngreen">
           <q-card-section >
@@ -18,7 +18,7 @@
       </div>
     </div>
     <div class="col-6">
-      <div class="q-mt-sm q-mb-sm q-mr-sm" style="text-align: center;background-color: #393838;color:white">OUTCOME2</div>
+      <div class="q-mt-sm q-mb-sm q-mr-sm text-subtitle2" style="text-align: center;background-color: #393838;color:white">OUTCOME2</div>
       <div style="text-align: center;height: 155px" class="q-mr-sm  q-mt-sm">
         <q-card class="my-card"  style="width:100%;height: 100%;background-color: lawngreen">
           <q-card-section >
