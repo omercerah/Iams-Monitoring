@@ -11,21 +11,21 @@
              <div style="color: white" class="row q-mb-md">
                <div class="col-2">CPU</div>
                <div class="col-4">
-                 <q-avatar  v-if="module.cpuState==1" color="green" class="q-ml-xl" text-color="white"  size="xs" />
+                 <q-avatar  v-if="module.cpuState==1" color="light-green-13" class="q-ml-xl" text-color="white"  size="xs" />
                  <q-avatar  v-if="module.cpuState==0" color=red class="q-ml-xl" text-color="white"  size="xs" />
                </div>
              </div>
               <div style="color: white" class="row q-mb-md">
                 <div class="col-2">Memory</div>
                 <div class="col-4">
-                  <q-avatar  v-if="module.memoryState==1" color="green" class="q-ml-xl" text-color="white"  size="xs" />
+                  <q-avatar  v-if="module.memoryState==1" color="light-green-13" class="q-ml-xl" text-color="white"  size="xs" />
                   <q-avatar  v-if="module.memoryState==0" color=red class="q-ml-xl" text-color="white"  size="xs" />
                 </div>
               </div>
               <div style="color: white" class="row q-mb-md">
                 <div class="col-2">Storage</div>
                 <div class="col-4">
-                  <q-avatar  v-if="module.storageState==1" color="green" class="q-ml-xl" text-color="white"  size="xs" />
+                  <q-avatar  v-if="module.storageState==1" color="light-green-13" class="q-ml-xl" text-color="white"  size="xs" />
                   <q-avatar  v-if="module.storageState==0" color=red class="q-ml-xl" text-color="white"  size="xs" />
                 </div>
               </div>

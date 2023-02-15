@@ -8,13 +8,13 @@
             <div class="server text-subtitle2 q-ml-sm q-mt-sm"  >{{todo.name}}</div>
             <q-card-section >
 
-              <div v-if="todo.cpuState==1" class=" q-mb-sm" style="color: white" >CPU<q-avatar class="q-ml-xl" color="green" text-color="white"  size="xs" /></div>
+              <div v-if="todo.cpuState==1" class=" q-mb-sm" style="color: white" >CPU<q-avatar class="q-ml-xl" color="light-green-13" text-color="white"  size="xs" /></div>
               <div v-if="todo.cpuState==0" class=" q-mb-sm" style="color: white" >Cpu<q-avatar class="q-ml-xl" color="red" text-color="white"  size="xs" /></div>
 
-              <div  v-if="todo.memoryState==1" class=" q-mb-sm" style="color: white" >Memory<q-avatar class="q-ml-lg" color="green" text-color="white"  size="xs" /></div>
+              <div  v-if="todo.memoryState==1" class=" q-mb-sm" style="color: white" >Memory<q-avatar class="q-ml-lg" color="light-green-13" text-color="white"  size="xs" /></div>
               <div v-if="todo.memoryState==0" class=" q-mb-sm" style="color: white" >Memory<q-avatar class="q-ml-lg" color="red" text-color="white"  size="xs" /></div>
 
-              <div v-if="todo.storageState==1" class="  q-mb-sm" style="color: white">Storage <q-avatar class="q-ml-lg" color="green" text-color="white"  size="xs" /></div>
+              <div v-if="todo.storageState==1" class="  q-mb-sm" style="color: white">Storage <q-avatar class="q-ml-lg" color="light-green-13" text-color="white"  size="xs" /></div>
               <div v-if="todo.storageState==0" class=" q-mb-sm" style="color: white">Storage <q-avatar class="q-ml-lg" color="red" text-color="white"  size="xs" /></div>
 
               <div   style="color: white">Uptime <span class="q-ml-lg">{{todo.upTime}}</span></div>
