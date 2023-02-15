@@ -1,22 +1,19 @@
 <template>
-  <div class="q-mt-sm text-subtitle2" style="text-align: center;background-color: #393838;color:white">CONNECTORS</div>
+  <div class="q-mt-sm text-subtitle2 connector" style="border-bottom: 1px solid white" >Connectors</div>
   <div class="row q-mt-sm" style="text-align: center" v-for="connector in connectorTodo" :key="connector.id">
-    <q-card class="my-card text-white" style="width:100%;background-color: #393838;border-radius: 0px">
-      <div v-if="connector.connectionStatus==1" style="background-color: lawngreen;padding: 5px;border-radius: 0px">
-        <div  class="q-ml-md text-subtitle2" style="text-align: left">{{ connector.name }}</div>
-      </div>
-      <div v-if="connector.connectionStatus==0" style="background-color: red;padding: 5px;border-radius: 0px">
-        <div  class="q-ml-md text-subtitle2" style="text-align: left">{{ connector.name }}</div>
+    <q-card class="my-card text-white " style="width:100%;background-color: #393838;border-radius: 0px">
+        <div  class="q-ml-lg text-subtitle2 q-mt-md" style="text-align: left">{{ connector.name }}</div>
+      <div class="row" >
+        <q-card-section style="text-align: left" class="col-7" >
+          <div v-if="connector.connectionStatus==1" >Connession: <span style="border-bottom: 1px solid white"> Established </span> <q-avatar color="green" text-color="white"  size="xs" /></div>
+          <div v-if="connector.connectionStatus==0">Connession:<span style="border-bottom: 1px solid white"> Not established </span>  <q-avatar color="red" text-color="white"  size="xs" /></div>
+          <div >Exchanged messages per hour:{{connector.exchangedMessage}}</div>
+        </q-card-section>
+
+        <div class="col-5" > <connectorhighcharts ></connectorhighcharts></div>
       </div>
 
-        <div style="text-align: left" class="q-mt-xs">
-          <div class="q-ml-lg">
-            <div v-if="connector.connectionStatus==1" class="text-subtitle2 " >Connession: <span style="border-bottom: 1px solid white"> Established </span> <q-avatar color="green" text-color="white"  size="xs" /></div>
-            <div v-if="connector.connectionStatus==0" class="text-subtitle2">Connession:<span style="border-bottom: 1px solid white"> Not established </span>  <q-avatar color="red" text-color="white"  size="xs" /></div>
-            <div class="text-subtitle2">Exchanged messages per hour:{{connector.exchangedMessage}}</div>
-          </div>
-       <connectorhighcharts ></connectorhighcharts>
-        </div>
+
     </q-card>
 
   </div>
@@ -92,5 +89,10 @@ const props = withDefaults(defineProps<Props>(), {
 </script>
 
 <style scoped>
+.connector{
+  color: white;
+  font-size: 15px;
+}
+
 
 </style>

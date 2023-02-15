@@ -9,20 +9,26 @@ export interface Meta {
 export interface Server {
   name:string;
   cpuState:number;
+  memoryState:number;
+  storageState:number;
   upTime:string;
 
 }
 export interface Module{
-  name:string,
-  cpuState:number
+  name:string;
+  cpuState:number;
+  memoryState:number;
+  storageState:number;
+  upTime:string;
 }
 export interface Connectors{
   name:string,
   connectionStatus:number,
   exchangedMessage:number
 }
-export interface ArchivalOutcome{
-  name:string,
-  connectionStatus:number,
-  cpuState:number
+export interface Archival{
+  cpuState:number;
+  memoryState:number;
+  storageState:number;
+  upTime:string;
 }

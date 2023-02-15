@@ -11,11 +11,11 @@
           @click="toggleLeftDrawer"
         />
 
-        <q-toolbar-title>
+        <q-toolbar-title class="text-subtitle2" style="font-size: 18px">
           Hitachi RAIL IAMS
         </q-toolbar-title>
-        <div class="q-mr-md">YYYY/MM/DD</div>
-        <div  class="q-mr-md">hh:mm:ss</div>
+        <div class="q-mr-md text-subtitle2"  style="font-size: 18px">YYYY/MM/DD</div>
+        <div  class="q-mr-md text-subtitle2"  style="font-size: 18px">hh:mm:ss</div>
         <q-btn flat round dense icon="notifications" />
         <q-btn flat round dense icon="info" />
         <q-btn flat round dense icon="person" />

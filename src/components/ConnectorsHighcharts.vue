@@ -1,5 +1,5 @@
 <template>
-  <apexchart width="100%" height="48%"  :options="chartOptions" :series="series"></apexchart>
+  <apexchart width="100%" height="90%"  :options="chartOptions" :series="series"></apexchart>
 </template>
 
 <script  >
@@ -13,78 +13,34 @@ export default {
   },
   data: function() {
     return {
-      series: [{
-        name: 'Correctly exchanged',
-        data: [66],
-
-      }, {
-        name: 'Mistankenly exchanged',
-        data: [34]
-      }],
+      series: [34, 66],
       chartOptions: {
         chart: {
-          type: 'bar',
-          stacked: true,
-          stackType: '100%',
-          foreColor:'white',
-          toolbar:{
-            tools: {
-              download: false
-            }
-          }
+          type: 'pie',
+          foreColor:'white'
         },
-        plotOptions: {
-          bar: {
-            horizontal: true,
-          },
-        },
+        labels: ['Correctly exchanged', 'Mistankenly exchanged'],
         colors:['#66FF00', '#FF0000' ],
-        xaxis: {
-          categories: [0],
-          labels:{
-            show:false
-          },
-          axisTicks: {
-            show: false
-          },
-          axisBorder: {
-            show: false
-          },
-        },
-     grid:{
-          yaxis:{
-            lines:{
-              show:false
-            },
-            labels:{
-              show:false
-            },
-          },
-       xaxis:{
-         lines:{
-           show:false
-         },
-         labels:{
-           show:false
-         }
-
-       },
-
-     },
-        fill: {
-          opacity: 1,
-        },
         legend: {
-          position: 'right',
-          offsetX: -30,
-          offsetY:15,
-          markers: {
-            shape: "circle",
-          },
+          position: "bottom",
           fontSize: 14,
+          offsetY: 0,
+          offsetX:0,
+          markers: {
+            radius: 0,
+          },
+        },
 
+        plotOptions:{
+          pie:{
+            offsetX: 0,
+            offsetY: -5
+          }
         }
+
+
       },
+
     };
   },
 };
