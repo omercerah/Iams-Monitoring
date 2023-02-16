@@ -1,5 +1,5 @@
 <template>
-  <apexchart width="100%" height="93%"  :options="chartOptions" :series="series"></apexchart>
+  <apexchart width="100%" height="85%"  :options="chartOptions" :series="series"></apexchart>
 </template>
 
 <script  >
@@ -29,13 +29,12 @@ export default {
           markers: {
             radius: 0,
           },
-          
         },
 
         plotOptions:{
           pie:{
             offsetX: 0,
-            offsetY: -5
+            offsetY: 0
           }
         }
 

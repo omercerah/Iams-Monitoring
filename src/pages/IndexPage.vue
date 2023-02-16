@@ -30,7 +30,7 @@ const serverTodo = ref<Server[]>([
     cpuState:1,
     memoryState:0,
     storageState:0,
-    upTime:'23 days & 5 hours'
+    upTime:'2 days & 5 hours'
 
 
   },
@@ -39,7 +39,7 @@ const serverTodo = ref<Server[]>([
     cpuState:1,
     memoryState:0,
     storageState:0,
-    upTime:'23 days & 5 hours'
+    upTime:'2 days & 5 hours'
 
   },
   {
@@ -47,7 +47,7 @@ const serverTodo = ref<Server[]>([
     cpuState:1,
     memoryState:0,
     storageState:0,
-    upTime:'23 days & 5 hours'
+    upTime:'2 days & 5 hours'
 
   }
 ]);

@@ -1,5 +1,6 @@
 <template>
-  <div class="q-mt-sm q-mr-md text-subtitle2 archival" style="border-bottom: 1px solid white" >Archival Outcome</div>
+  <div class="q-mt-sm q-mr-md text-subtitle2 archival" >Archival Outcome</div>
+  <div class="q-mt-sm q-mr-md" style="border-bottom: 1px solid white"></div>
   <div class="row q-mt-sm" >
     <div class="col-6"  v-for="archival in archivalTodo" :key="archival.id" >
       <div style="text-align: center;height: 155px;border-bottom: 3px solid red" class="q-mr-md  q-mt-sm" >

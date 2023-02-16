@@ -1,9 +1,10 @@
 <template>
-  <div class="q-mt-sm q-mr-md text-subtitle2 module" style="border-bottom: 1px solid white" >Modules Status</div>
+  <div class="q-mt-sm q-mr-md text-subtitle2 module"  >Modules Status</div>
+  <div class="q-mt-sm q-mr-md" style="border-bottom: 1px solid white"></div>
   <div class="row q-mt-md">
 
     <div class="col-3"  v-for="module in moduleTodo" :key="module.id">
-      <div  style="text-align: center;height: 240px;border-bottom: 3px solid lawngreen" class="q-mr-md" >
+      <div  style="text-align: center;height: 250px;border-bottom: 3px solid lawngreen" class="q-mr-md" >
         <q-card class="my-card"  style="width:100%;height: 100%;background-color: #393838;border-radius: 0px">
           <div style="text-align:left;padding: 5px">
             <div class="module text-subtitle2 q-ml-sm q-mt-sm" >{{module.name}}</div>
@@ -30,7 +31,7 @@
                 </div>
               </div>
               <div style="color: white" class="row q-mb-sm">
-                <div class="col-6">Uptime</div>
+                <div class="col-5">Uptime</div>
                 <div class="col-6">
                  {{module.upTime}}
                 </div>
