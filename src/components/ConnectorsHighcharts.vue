@@ -23,13 +23,13 @@ export default {
         colors:['#66FF00', '#FF0000' ],
         legend: {
           position: "bottom",
-          fontSize: 14,
+          fontSize: 12,
           offsetY: 0,
           offsetX:0,
           markers: {
             radius: 0,
           },
-
+          
         },
 
         plotOptions:{
