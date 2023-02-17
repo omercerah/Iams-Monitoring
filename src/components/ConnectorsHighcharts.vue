@@ -38,8 +38,8 @@ export default {
 
         plotOptions:{
           pie:{
-            offsetX: 0,
-            offsetY: 0
+            offsetX: -20,
+            offsetY: -5
           }
         }
 
