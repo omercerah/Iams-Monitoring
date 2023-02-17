@@ -4,14 +4,28 @@
   <div class="row " style="text-align: center;border-bottom: 3px solid lawngreen" v-for="connector in connectorTodo" :key="connector.id">
     <q-card class="my-card text-white " style="width:100%;background-color: #393838;border-radius: 0px">
         <div  class="q-ml-lg text-subtitle2 q-mt-md" style="text-align: left">{{ connector.name }}</div>
-      <div class="row" >
-        <q-card-section style="text-align: left" class="col-7" >
-          <div v-if="connector.connectionStatus==1" >Connession: <span > Established </span> <q-avatar color="light-green-13" text-color="white"  size="xs" /></div>
-          <div v-if="connector.connectionStatus==0">Connession:<span > Not established </span>  <q-avatar color="red" text-color="white"  size="xs" /></div>
-          <div >Exchanged messages per hour:{{connector.exchangedMessage}}</div>
-        </q-card-section>
 
-        <div class="col-5" > <connectorhighcharts ></connectorhighcharts></div>
+<!--      <div style="display: inline-flex" class="q-ml-sm">-->
+<!--        <div style="text-align: left"  >-->
+<!--          <div v-if="connector.connectionStatus==1" >Connession: <span > Established </span> <q-avatar color="light-green-13" text-color="white"  size="xs" /></div>-->
+<!--          <div v-if="connector.connectionStatus==0">Connession:<span > Not established </span>  <q-avatar color="red" text-color="white"  size="xs" /></div>-->
+<!--          <div >Exchanged messages per hour:{{connector.exchangedMessage}}</div>-->
+<!--        </div>-->
+<!--         <connectorhighcharts ></connectorhighcharts>-->
+<!--      </div>-->
+
+      <div class="row">
+        <div style="text-align: left;font-size: 15px" class="col-8 q-mt-lg "  >
+          <div v-if="connector.connectionStatus==1" class="q-ml-md" >Connession: <span > Established </span> <q-avatar class="q-ml-xs" color="light-green-13" text-color="white"  size="xs" /></div>
+          <div v-if="connector.connectionStatus==0" class="q-ml-md">Connession:<span > Not established </span>  <q-avatar class="q-ml-xs" color="red" text-color="white"  size="xs" /></div>
+          <div class="q-ml-md" >Exchanged messages per hour:{{connector.exchangedMessage}}</div>
+        </div>
+        <div class="col-4"> <connectorhighcharts ></connectorhighcharts></div>
+      </div>
+
+      <div style="display: inline-flex;margin-bottom: 10px">
+        <div style="margin-right: 20px"><q-avatar style="border-radius:0;margin-right: 5px" color="light-green-13" text-color="white"  size="xs" />Correctly exchanged</div>
+        <div ><q-avatar style="border-radius: 0;margin-right: 5px" color="red" text-color="white"  size="xs" />Mistakenly exchanged</div>
       </div>
 
 
