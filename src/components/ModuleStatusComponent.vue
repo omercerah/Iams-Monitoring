@@ -36,16 +36,6 @@
                  {{module.upTime}}
                 </div>
               </div>
-<!--              <div v-if="module.cpuState==1" class="  q-mb-sm " style="color: white">CPU<q-avatar color="green" class="q-ml-xl" text-color="white"  size="xs" /></div>-->
-<!--              <div v-if="module.cpuState==0" class="  q-mb-sm" style="color: white">CPU<q-avatar color="red" class="q-ml-xl" text-color="white"  size="xs" /></div>-->
-
-<!--              <div  v-if="module.memoryState==1" class=" q-mb-sm " style="color: white" >Memory<q-avatar class="q-ml-lg" color="green" text-color="white"  size="xs" /></div>-->
-<!--              <div v-if="module.memoryState==0" class=" q-mb-sm " style="color: white" >Memory<q-avatar class="q-ml-lg" color="red" text-color="white"  size="xs" /></div>-->
-
-<!--              <div v-if="module.storageState==1" class="  q-mb-sm " style="color: white">Storage <q-avatar class="q-ml-lg" color="green" text-color="white"  size="xs" /></div>-->
-<!--              <div v-if="module.storageState==0" class=" q-mb-sm " style="color: white">Storage <q-avatar class="q-ml-lg" color="red" text-color="white"  size="xs" /></div>-->
-
-<!--              <div  class=" q-mb-sm " style="color: white">Uptime <span class="q-ml-lg">{{module.upTime}}</span></div>-->
             </div>
           </div>
         </q-card>

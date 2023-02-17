@@ -24,60 +24,6 @@
 
   </div>
 
-
-
-
-
-
-
-<!--  <div class="row q-mt-md" style="text-align: center">-->
-<!--    <q-card class="my-card  text-white" style="width:100%;background-color: #393838">-->
-<!--      <div style="background-color: red;padding: 5px">-->
-<!--        <div class="q-ml-md"  style="text-align: left">NMS CONNECTOR</div>-->
-<!--      </div>-->
-
-<!--      <div style="text-align: left">-->
-<!--        <div class="q-ml-lg">-->
-<!--          <div >Connession:</div>-->
-<!--          <div >Exchanged messages per hour:</div>-->
-<!--        </div>-->
-<!--        <connectorhighcharts></connectorhighcharts>-->
-<!--      </div>-->
-
-<!--    </q-card>-->
-<!--  </div>-->
-<!--  <div class="row q-mt-md" style="text-align: center">-->
-<!--    <q-card class="my-card  text-white" style="width:100%;background-color: #393838">-->
-<!--      <div style="background-color: lawngreen;padding: 5px">-->
-<!--        <div class="q-ml-md" style="text-align: left">FTM CONNECTOR</div>-->
-<!--      </div>-->
-
-<!--      <div style="text-align: left">-->
-<!--        <div class="q-ml-lg">-->
-<!--          <div >Connession:</div>-->
-<!--          <div >Exchanged messages per hour:</div>-->
-<!--        </div>-->
-<!--        <connectorhighcharts></connectorhighcharts>-->
-<!--      </div>-->
-
-<!--    </q-card>-->
-<!--  </div>-->
-<!--  <div class="row q-mt-md" style="text-align: center">-->
-<!--    <q-card class="my-card  text-white" style="width:100%;background-color: #393838">-->
-<!--      <div style="background-color: lawngreen;padding: 5px">-->
-<!--        <div class="q-ml-md" style="text-align: left">MDU CONNECTOR</div>-->
-<!--      </div>-->
-
-<!--      <div style="text-align: left">-->
-<!--        <div class="q-ml-lg">-->
-<!--          <div >Connession:</div>-->
-<!--          <div >Exchanged messages per hour:</div>-->
-<!--        </div>-->
-<!--        <connectorhighcharts></connectorhighcharts>-->
-<!--      </div>-->
-
-<!--    </q-card>-->
-<!--  </div>-->
 </template>
 
 <script setup lang="ts">
