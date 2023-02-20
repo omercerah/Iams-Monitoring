@@ -1,4 +1,5 @@
 <template>
+
   <div class="q-mt-sm q-mr-md text-subtitle2 server q-mb-sm"  >Server Status</div>
   <div class="q-mb-md q-mr-lg" style="border-bottom: 1px solid white"></div>
   <div class="row q-mt-md " >
@@ -10,7 +11,7 @@
             <q-card-section >
 
               <div v-if="todo.cpuState==1" class=" q-mb-sm server "  >CPU<q-avatar class="q-ml-xl" color="light-green-13" text-color="white"  size="xs" /></div>
-              <div v-if="todo.cpuState==0" class=" q-mb-sm server"  >Cpu<q-avatar class="q-ml-xl" color="red" text-color="white"  size="xs" /></div>
+              <div v-if="todo.cpuState==0" class=" q-mb-sm server"  >CPU<q-avatar class="q-ml-xl" color="red" text-color="white"  size="xs" /></div>
 
               <div  v-if="todo.memoryState==1" class=" q-mb-sm server"  >Memory<q-avatar class="q-ml-lg" color="light-green-13" text-color="white"  size="xs" /></div>
               <div v-if="todo.memoryState==0" class=" q-mb-sm server"  >Memory<q-avatar class="q-ml-lg" color="red" text-color="white"  size="xs" /></div>
@@ -35,16 +36,21 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import {onMounted,  ref} from 'vue';
 import { Server } from 'components/models';
 
+const props = defineProps({
+  serverTodo: {type: Array},
 
-interface Props {
-  serverTodo?: Server[];
-}
-const props = withDefaults(defineProps<Props>(), {
-  serverTodo: () => [],
-});
+})
+
+
+// interface Props {
+//   serverTodo?: Server[];
+// }
+// const props = withDefaults(defineProps<Props>(), {
+//   serverTodo: () => [],
+// });
 
 
 

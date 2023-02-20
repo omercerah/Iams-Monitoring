@@ -1,4 +1,5 @@
 <template>
+
   <div class="q-mt-sm q-mr-md text-subtitle2 archival" >Archival Outcome</div>
   <div class="q-mt-sm q-mr-lg" style="border-bottom: 1px solid white"></div>
   <div class="row q-mt-sm" >
@@ -51,12 +52,17 @@
 <script setup lang="ts">
 import {Archival} from 'components/models';
 
-interface Props {
-  archivalTodo?: Archival[];
-}
-const props = withDefaults(defineProps<Props>(), {
-  archivalTodo: () => [],
-});
+const props = defineProps({
+  archivalTodo: {type: Array},
+
+})
+
+// interface Props {
+//   archivalTodo?: Archival[];
+// }
+// const props = withDefaults(defineProps<Props>(), {
+//   archivalTodo: () => [],
+// });
 
 
 </script>

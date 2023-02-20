@@ -1,5 +1,5 @@
 <template>
-  <apexchart width="100%" height="65%"  :options="chartOptions" :series="series"></apexchart>
+  <apexchart width="100%" height="75%"  :options="chartOptions" :series="series"></apexchart>
 </template>
 
 <script  >
@@ -19,6 +19,7 @@ export default {
           type: 'pie',
           foreColor:'white'
         },
+
         labels: ['Correctly exchanged', 'Mistankenly exchanged'],
         colors:['#66FF00', '#FF0000' ],
         legend: {
@@ -29,6 +30,7 @@ export default {
           offsetX:0,
           markers: {
             radius: 0,
+
           },
           onItemHover: {
             highlightDataSeries: false
@@ -38,8 +40,11 @@ export default {
 
         plotOptions:{
           pie:{
-            offsetX: -20,
-            offsetY: -5
+            offsetX: -15,
+            offsetY: 20,
+            dataLabels: {
+              offset: -11,
+            },
           }
         }
 

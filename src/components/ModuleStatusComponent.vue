@@ -50,12 +50,17 @@
 <script setup lang="ts">
 import { Module, } from 'components/models';
 
-interface Props {
-  moduleTodo?: Module[];
-}
-const props = withDefaults(defineProps<Props>(), {
-  moduleTodo: () => [],
-});
+const props = defineProps({
+  moduleTodo: {type: Array},
+
+})
+
+// interface Props {
+//   moduleTodo?: Module[];
+// }
+// const props = withDefaults(defineProps<Props>(), {
+//   moduleTodo: () => [],
+// });
 
 
 

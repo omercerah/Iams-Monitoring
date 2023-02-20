@@ -3,14 +3,14 @@
   <div class="row q-ml-md q-mr-md" >
     <div class="col-8">
       <div class="q-mb-md">
-        <serverStatus  :serverTodo="serverTodo"></serverStatus>
+        <serverStatus  :serverTodo="dataJson.serverStatus"></serverStatus>
       </div>
-      <div class="q-mb-md"> <moduleStatus :moduleTodo="moduleTodo"></moduleStatus></div>
-      <div> <archivalOutcome :archivalTodo="archivalTodo"></archivalOutcome></div>
+      <div class="q-mb-md"> <moduleStatus :moduleTodo="dataJson.moduleStatus"></moduleStatus></div>
+      <div> <archivalOutcome :archivalTodo="dataJson.archivalStatus"></archivalOutcome></div>
     </div>
 
     <div class="col-4 ">
-      <connectors :connectorTodo="connectorTodo"></connectors>
+      <connectors :connectorTodo="dataJson.connectorStatus"></connectors>
     </div>
 
   </div>
@@ -22,7 +22,7 @@ import archivalOutcome from "components/ArchivalOutcomeComponent.vue";
 import connectors from "components/ConnectorsComponent.vue";
 import serverStatus from "components/ServerStatusComponent.vue";
 import moduleStatus from "components/ModuleStatusComponent.vue";
-import { ref } from 'vue';
+import {onMounted, ref} from 'vue';
 import { Server,Module,Meta,Connectors,Archival } from 'components/models';
 const serverTodo = ref<Server[]>([
   {
@@ -116,4 +116,15 @@ const meta = ref<Meta>({
   totalCount: 1200
 });
 
+const dataJson=ref([])
+
+onMounted(() => {
+  getData()
+})
+
+async function getData() {
+  const res = await fetch('http://localhost:3000');
+  const finalRes = await res.json();
+  dataJson.value = finalRes;
+}
 </script>

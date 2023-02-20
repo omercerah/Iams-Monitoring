@@ -3,10 +3,10 @@
   <div class="q-mb-md" style="border-bottom: 1px solid white"></div>
   <div class="row " style="text-align: center;border-bottom: 3px solid lawngreen" v-for="connector in connectorTodo" :key="connector.id">
     <q-card class="my-card text-white " style="width:100%;background-color: #393838;border-radius: 0px">
-        <div  class="q-ml-lg text-subtitle2 q-mt-md" style="text-align: left">{{ connector.name }}</div>
 
-      <div class="row">
-        <div style="text-align: left;font-size: 15px" class="col-8 q-mt-md "  >
+      <div class="row q-mb-lg">
+        <div style="text-align: left;font-size: 15px" class="col-8 "  >
+          <div  class="q-ml-lg text-subtitle2 q-mt-md q-mb-sm" style="text-align: left">{{ connector.name }}</div>
           <div v-if="connector.connectionStatus==1" class="q-ml-md" >Connession: <span > Established </span> <q-avatar class="q-ml-xs" color="light-green-13" text-color="white"  size="xs" /></div>
           <div v-if="connector.connectionStatus==0" class="q-ml-md">Connession:<span > Not established </span>  <q-avatar class="q-ml-xs" color="red" text-color="white"  size="xs" /></div>
           <div class="q-ml-md" >Exchanged messages per hour:{{connector.exchangedMessage}}</div>
@@ -14,7 +14,7 @@
         <div class="col-4"> <connectorhighcharts ></connectorhighcharts></div>
       </div>
 
-      <div style="display: inline-flex;margin-bottom: 10px">
+      <div style="display: inline-flex" class="q-mb-xs">
         <div style="margin-right: 20px"><q-avatar style="border-radius:0;margin-right: 5px" color="light-green-13" text-color="white"  size="xs" />Correctly exchanged</div>
         <div ><q-avatar style="border-radius: 0;margin-right: 5px" color="red" text-color="white"  size="xs" />Mistakenly exchanged</div>
       </div>
@@ -31,13 +31,20 @@ import connectorhighcharts from "./ConnectorsHighcharts.vue";
 import { computed, ref } from 'vue';
 import {Connectors} from 'components/models';
 
-interface Props {
-  connectorTodo?: Connectors[];
+const props = defineProps({
+  connectorTodo: {type: Array},
 
-}
-const props = withDefaults(defineProps<Props>(), {
-  connectorTodo: () => [],
-});
+})
+
+// interface Props {
+//   connectorTodo?: Connectors[];
+//
+// }
+// const props = withDefaults(defineProps<Props>(), {
+//   connectorTodo: () => [],
+// });
+
+
 </script>
 
 <style scoped>
