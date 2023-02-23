@@ -4,7 +4,7 @@
   <div class="q-mt-sm q-mr-lg" style="border-bottom: 1px solid white"></div>
   <div class="row q-mt-sm" >
     <div class="col-6"  v-for="archival in archivalTodo" :key="archival.id" >
-      <div style="text-align: center;height: 155px;border-bottom: 3px solid red" class="q-mr-lg  q-mt-sm" >
+      <div style="text-align: center;border-bottom: 3px solid red" class="q-mr-lg  q-mt-sm" >
         <q-card class="my-card"  style="width:100%;height: 100%;background-color: #393838;border-radius: 0px">
          <div style="text-align:left;padding: 5px">
            <div class="archival text-subtitle2 q-ml-sm q-mt-sm" >Successfull</div>
@@ -30,7 +30,7 @@
 
 
     <div class="col-6">
-      <div style="text-align: center;height: 155px;border-bottom: 3px solid lawngreen" class="q-mr-lg  q-mt-sm">
+      <div style="text-align: center;height: 135px;border-bottom: 3px solid lawngreen" class="q-mr-lg  q-mt-sm">
         <q-card class="my-card"  style="width:100%;height: 100%;background-color: #393838;border-radius: 0px">
           <q-card-section >
             <div ></div>

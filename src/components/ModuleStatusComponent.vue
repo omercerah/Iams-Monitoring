@@ -4,7 +4,7 @@
   <div class="row q-mt-md">
 
     <div class="col-3"  v-for="module in moduleTodo" :key="module.id">
-      <div  style="text-align: center;height: 250px;border-bottom: 3px solid lawngreen" class="q-mr-lg" >
+      <div  style="text-align: center;border-bottom: 3px solid lawngreen" class="q-mr-lg" >
         <q-card class="my-card"  style="width:100%;height: 100%;background-color: #393838;border-radius: 0px">
           <div style="text-align:left;padding: 5px">
             <div class="module text-subtitle2 q-ml-sm q-mt-sm" >{{module.name}}</div>
@@ -30,7 +30,7 @@
                   <q-avatar  v-if="module.storageState==0" color=red class="q-ml-xl" text-color="white"  size="xs" />
                 </div>
               </div>
-              <div style="color: white" class="row q-mb-sm ">
+              <div style="color: white" class="row q-mb-lg ">
                 <div class="col-5 module">Uptime</div>
                 <div class="col-6">
                  {{module.upTime}}

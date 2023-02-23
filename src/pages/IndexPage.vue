@@ -1,15 +1,16 @@
 <template >
   <q-page style="background-color:#252323">
   <div class="row q-ml-md q-mr-md" >
-    <div class="col-8">
+    <div class="col-7">
       <div class="q-mb-md">
-        <serverStatus  :serverTodo="dataJson.serverStatus"></serverStatus>
+        <div class="q-mb-md"> <moduleStatus :moduleTodo="dataJson.moduleStatus"></moduleStatus></div>
+
       </div>
-      <div class="q-mb-md"> <moduleStatus :moduleTodo="dataJson.moduleStatus"></moduleStatus></div>
+      <serverStatus  :serverTodo="dataJson.serverStatus"></serverStatus>
       <div> <archivalOutcome :archivalTodo="dataJson.archivalStatus"></archivalOutcome></div>
     </div>
 
-    <div class="col-4 ">
+    <div class="col-5 ">
       <connectors :connectorTodo="dataJson.connectorStatus"></connectors>
     </div>
 
