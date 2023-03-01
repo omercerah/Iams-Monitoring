@@ -5,13 +5,13 @@
     <q-card class="my-card text-white " style="width:100%;background-color: #393838;border-radius: 0">
 
       <div class="row q-mb-xs " >
-        <div style="text-align: left;font-size: 15px" class="col-6" >
+        <div style="text-align: left;font-size: 15px" class="col-7" >
           <div  class="q-ml-lg text-subtitle2 q-mt-md q-mb-sm" style="text-align: left">{{ connector.name }}</div>
           <div v-if="connector.connectionStatus==1" class="q-ml-md"  >Connession: <span > Established </span> <q-avatar class="q-ml-xs" color="light-green-13" text-color="white"  size="xs" /></div>
           <div v-if="connector.connectionStatus==0" class="q-ml-md" >Connession:<span > Not established </span>  <q-avatar class="q-ml-xs" color="red" text-color="white"  size="xs" /></div>
           <div class="q-ml-md" >Exchanged messages per hour:{{connector.exchangedMessage}}</div>
         </div>
-        <div class="col-6" ><highcharts></highcharts></div>
+        <div class="col-5" ><highcharts></highcharts></div>
       </div>
 
       <div style="display: inline-flex" class="q-mb-xs">

@@ -11,7 +11,10 @@ const chartOptions = computed(() => ({
     plotBorderWidth: null,
     plotShadow: false,
     type: 'pie',
-    width: 245,
+    style: {
+      float: 'right'
+    },
+    width: 175,
     height: 130,
     backgroundColor: "#393838"
   },
@@ -37,7 +40,7 @@ const chartOptions = computed(() => ({
       dataLabels: {
         enabled: true,
         format: '{point.percentage:.1f} %',
-        distance:25,
+        distance:55,
         alignTo: 'plotEdges',
         y:0,
         x:0,

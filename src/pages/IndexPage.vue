@@ -2,7 +2,7 @@
   <q-page style="background-color:#252323">
 
   <div class="row q-ml-md q-mr-md" >
-    <div  class="col-7">
+    <div  class="col-8">
       <div class="q-mb-md">
         <div class="q-mb-md"> <moduleStatus :moduleCount="moduleCount" :moduleTodo="dataJson.moduleStatus"></moduleStatus></div>
 
@@ -11,7 +11,7 @@
       <div> <archivalOutcome :archivalTodo="dataJson.archivalStatus" :archivalCount="archivalCount"></archivalOutcome></div>
     </div>
 
-    <div class="col-5 ">
+    <div class="col-4 ">
       <connectors :connectorTodo="dataJson.connectorStatus" :connectorCount="connectorCount"></connectors>
     </div>
 
