@@ -37,8 +37,10 @@ const chartOptions = computed(() => ({
       dataLabels: {
         enabled: true,
         format: '{point.percentage:.1f} %',
+        distance:25,
+        alignTo: 'plotEdges',
         y:0,
-        x:0
+        x:0,
 
       }
     }

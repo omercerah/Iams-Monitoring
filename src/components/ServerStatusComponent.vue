@@ -1,10 +1,9 @@
 <template>
-
   <div class="q-mt-sm q-mr-md text-subtitle2 server q-mb-sm"  >Server Status</div>
   <div class="q-mb-md q-mr-lg" style="border-bottom: 1px solid white"></div>
   <div class="row q-mt-md " >
     <div class="col-4"  v-for="todo in serverTodo" :key="todo.id" >
-      <div style="border-bottom: 3px solid lawngreen" class="q-mr-lg" >
+      <div class="q-mr-lg" >
         <q-card class="my-card" style="width:100%;height:100%;background-color: #393838;border-radius: 0px"  >
           <div style="text-align:left" class="q-pa-xs" >
             <div class="server text-subtitle2 q-ml-sm q-mt-sm q-mb-sm"  >{{todo.name}}</div>
@@ -26,7 +25,8 @@
 
 
         </q-card>
-
+        <div v-if="count==3" style="border-bottom: 3px solid lawngreen"></div>
+        <div v-if="count!=3" style="border-bottom: 3px solid red"></div>
 
       </div>
     </div>
@@ -34,14 +34,41 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup >
 import {onMounted,  ref} from 'vue';
 import { Server } from 'components/models';
 
+onMounted(() => {
+debugger
+})
+
 const props = defineProps({
-  serverTodo: {type: Array},
+  serverTodo: {
+    type: Array
+  },
 
 })
+
+
+
+
+
+const count=ref()
+
+// const serverCount=()=>{
+//   for(let i=0;i<props.serverTodo.length;i++)
+//   {
+//     count.value=props.serverTodo[i].cpuState + props.serverTodo[i].memoryState + props.serverTodo[i].storageState
+//   }
+// }
+// serverCount()
+
+
+
+
+
+
+
 
 
 // interface Props {

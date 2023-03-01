@@ -22,7 +22,6 @@
           <div v-if="connector.connectionStatus==0" class="q-ml-md" >Connession:<span > Not established </span>  <q-avatar class="q-ml-xs" color="red" text-color="white"  size="xs" /></div>
           <div class="q-ml-md" >Exchanged messages per hour:{{connector.exchangedMessage}}</div>
         </div>
-        <!--        <div class="col-4"> <connectorhighcharts ></connectorhighcharts></div>-->
         <div class="col-6" ><highcharts></highcharts></div>
       </div>
 
