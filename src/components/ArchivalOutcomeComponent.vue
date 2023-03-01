@@ -3,8 +3,8 @@
   <div class="q-mt-sm q-mr-md text-subtitle2 archival" >Archival Outcome</div>
   <div class="q-mt-sm q-mr-lg" style="border-bottom: 1px solid white"></div>
   <div class="row q-mt-sm" >
-    <div class="col-6"  v-for="archival in archivalTodo" :key="archival.id" >
-      <div style="text-align: center;border-bottom: 3px solid red" class="q-mr-lg  q-mt-sm" >
+    <div class="col-6"  v-for="(archival,index) in archivalTodo" :key="archival.id" >
+      <div style="text-align: center" class="q-mr-lg  q-mt-sm" >
         <q-card class="my-card"  style="width:100%;height: 100%;background-color: #393838;border-radius: 0px">
          <div style="text-align:left;padding: 5px">
            <div class="archival text-subtitle2 q-ml-sm q-mt-sm" >Successfull</div>
@@ -25,12 +25,14 @@
            </div>
 
         </q-card>
+        <div v-if="archivalCount[index]==3" style="border-bottom: 3px solid lawngreen"></div>
+        <div v-if="archivalCount[index]!=3" style="border-bottom: 3px solid red"></div>
       </div>
     </div>
 
 
     <div class="col-6">
-      <div style="text-align: center;height: 135px;border-bottom: 3px solid lawngreen" class="q-mr-lg  q-mt-sm">
+      <div style="text-align: center;height: 135px" class="q-mr-lg  q-mt-sm">
         <q-card class="my-card"  style="width:100%;height: 100%;background-color: #393838;border-radius: 0px">
           <q-card-section >
             <div ></div>
@@ -54,15 +56,11 @@ import {Archival} from 'components/models';
 
 const props = defineProps({
   archivalTodo: {type: Array},
+  archivalCount: {type: Array}
 
 })
 
-// interface Props {
-//   archivalTodo?: Archival[];
-// }
-// const props = withDefaults(defineProps<Props>(), {
-//   archivalTodo: () => [],
-// });
+
 
 
 </script>

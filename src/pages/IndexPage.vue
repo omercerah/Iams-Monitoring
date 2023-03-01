@@ -4,15 +4,15 @@
   <div class="row q-ml-md q-mr-md" >
     <div  class="col-7">
       <div class="q-mb-md">
-        <div class="q-mb-md"> <moduleStatus :moduleTodo="dataJson.moduleStatus"></moduleStatus></div>
+        <div class="q-mb-md"> <moduleStatus :moduleCount="moduleCount" :moduleTodo="dataJson.moduleStatus"></moduleStatus></div>
 
       </div>
-      <serverStatus  :serverTodo="dataJson.serverStatus"></serverStatus>
-      <div> <archivalOutcome :archivalTodo="dataJson.archivalStatus"></archivalOutcome></div>
+      <serverStatus  :serverTodo="dataJson.serverStatus" :serverCount="serverCount"></serverStatus>
+      <div> <archivalOutcome :archivalTodo="dataJson.archivalStatus" :archivalCount="archivalCount"></archivalOutcome></div>
     </div>
 
     <div class="col-5 ">
-      <connectors :connectorTodo="dataJson.connectorStatus"></connectors>
+      <connectors :connectorTodo="dataJson.connectorStatus" :connectorCount="connectorCount"></connectors>
     </div>
 
   </div>
@@ -25,100 +25,15 @@ import connectors from "components/ConnectorsComponent.vue";
 import serverStatus from "components/ServerStatusComponent.vue";
 import moduleStatus from "components/ModuleStatusComponent.vue";
 import {onMounted, ref} from 'vue';
-// import { Server,Module,Meta,Connectors,Archival } from 'components/models';
-// const serverTodo = ref<Server[]>([
-//   {
-//     name:'SERVER A',
-//     cpuState:1,
-//     memoryState:0,
-//     storageState:0,
-//     upTime:'2 days & 5 hours'
-//
-//
-//   },
-//   {
-//     name:'SERVER B',
-//     cpuState:1,
-//     memoryState:0,
-//     storageState:0,
-//     upTime:'2 days & 5 hours'
-//
-//   },
-//   {
-//     name:'SERVER CD',
-//     cpuState:1,
-//     memoryState:0,
-//     storageState:0,
-//     upTime:'2 days & 5 hours'
-//
-//   }
-// ]);
-// const moduleTodo = ref<Module[]>([
-//   {
-//     name:'DHW  MODULE',
-//     cpuState:1,
-//     memoryState:0,
-//     storageState:0,
-//     upTime:'2d & 5h'
-//   },
-//   {
-//     name:'SA MODULE',
-//     cpuState:1,
-//     memoryState:0,
-//     storageState:0,
-//     upTime:'2d & 5h'
-//   },
-//   {
-//     name:'ERMS MODULE',
-//     cpuState:1,
-//     memoryState:0,
-//     storageState:0,
-//     upTime:'2d & 5h'
-//   },
-//   {
-//     name:'MONITORING MODULE',
-//     cpuState:1,
-//     memoryState:0,
-//     storageState:0,
-//     upTime:'2d & 5h'
-//   }
-// ]);
-// const connectorTodo = ref<Connectors[]>([
-//   {
-//     connectionStatus:0,
-//     name:'ATS CONNECTOR',
-//     exchangedMessage:2,
-//   },
-//   {
-//     connectionStatus:1,
-//     name:'NMS CONNECTOR',
-//     exchangedMessage:1,
-//   },
-//   {
-//     connectionStatus:1,
-//     name:'FTM CONNECTOR',
-//     exchangedMessage:3,
-//   },
-//   {
-//     connectionStatus:0,
-//     name:'MDU CONNECTOR',
-//     exchangedMessage:4,
-//   }
-// ]);
-// const archivalTodo = ref<Archival[]>([
-//   {
-//     cpuState:1,
-//     memoryState:0,
-//     storageState:0,
-//     upTime:'2d & 5h'
-//   },
-// ]);
 
 
 
 
 const dataJson=ref([])
-
+const serverCount=ref([])
+const moduleCount=ref([])
+const archivalCount=ref([])
+const connectorCount=ref([])
 onMounted(() => {
   getData()
 })
@@ -127,6 +42,31 @@ async function getData() {
   const res = await fetch('http://localhost:8081/dashboards');
   const finalRes = await res.json();
   dataJson.value = finalRes;
+console.log("json",dataJson.value.archivalStatus[0].cpuState)
+  for(let i=0;i<dataJson.value.serverStatus.length;i++)
+   {
+     const server=dataJson.value.serverStatus[i].cpuState + dataJson.value.serverStatus[i].memoryState + dataJson.value.serverStatus[i].storageState
+     serverCount.value.push(server)
+   }
+
+   for(let i=0;i<dataJson.value.moduleStatus.length;i++){
+     const module=dataJson.value.moduleStatus[i].cpuState + dataJson.value.moduleStatus[i].memoryState + dataJson.value.moduleStatus[i].storageState
+     moduleCount.value.push(module)
+   }
+
+  for(let i=0;i<dataJson.value.archivalStatus.length;i++){
+    const archival=dataJson.value.archivalStatus[i].cpuState + dataJson.value.archivalStatus[i].memoryState + dataJson.value.archivalStatus[i].storageState
+    archivalCount.value.push(archival)
+  }
+
+  for(let i=0;i<dataJson.value.connectorStatus.length;i++){
+  const connector=dataJson.value.connectorStatus[i].connectionStatus
+    connectorCount.value.push(connector)
+
+  }
+
+
+
 }
 
 

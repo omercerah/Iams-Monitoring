@@ -3,8 +3,8 @@
   <div class="q-mt-sm q-mr-lg" style="border-bottom: 1px solid white"></div>
   <div class="row q-mt-md">
 
-    <div class="col-3"  v-for="module in moduleTodo" :key="module.id">
-      <div  style="text-align: center;border-bottom: 3px solid lawngreen" class="q-mr-lg" >
+    <div class="col-3"  v-for="(module,index) in moduleTodo" :key="module.id">
+      <div  style="text-align: center" class="q-mr-lg" >
         <q-card class="my-card"  style="width:100%;height: 100%;background-color: #393838;border-radius: 0px">
           <div style="text-align:left;padding: 5px">
             <div class="module text-subtitle2 q-ml-sm q-mt-sm" >{{module.name}}</div>
@@ -39,9 +39,10 @@
             </div>
           </div>
         </q-card>
+        <div v-if="moduleCount[index]==3" style="border-bottom: 3px solid lawngreen"></div>
+        <div v-if="moduleCount[index]!=3" style="border-bottom: 3px solid red"></div>
       </div>
     </div>
-
 
 
   </div>
@@ -52,15 +53,11 @@ import { Module, } from 'components/models';
 
 const props = defineProps({
   moduleTodo: {type: Array},
+  moduleCount: {type: Array},
 
 })
 
-// interface Props {
-//   moduleTodo?: Module[];
-// }
-// const props = withDefaults(defineProps<Props>(), {
-//   moduleTodo: () => [],
-// });
+
 
 
 
